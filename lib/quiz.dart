@@ -6,6 +6,7 @@ import 'package:quiz_app/start_screen.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
+  @override
   State<Quiz> createState() {
     return _QuizState();
   }
@@ -29,10 +30,11 @@ class _QuizState extends State<Quiz> {
 
   void selectAnswer(String answer) {
     selectedAnswer.add(answer);
-    if (selectedAnswer.length == questions.length)
+    if (selectedAnswer.length == questions.length) {
       setState(() {
         activeScreen = ResultScreen(selectedAnswer, restartQuiz);
       });
+    }
   }
 
   void restartQuiz() {

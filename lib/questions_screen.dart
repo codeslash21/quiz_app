@@ -34,7 +34,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                (currIndex + 1).toString() + ". " + currentQuestion.question,
+                "${currIndex + 1}. ${currentQuestion.question}",
                 style: GoogleFonts.lato(
                   color: Colors.white,
                   fontSize: 22,
